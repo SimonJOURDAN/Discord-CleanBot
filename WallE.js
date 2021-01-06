@@ -14,7 +14,7 @@ client.on('message', message => {
         if(isProtected(message.channel.id)){
             message.react('🛑');
             let user = protector(message.channel.id);
-            message.channel.send(`Ce salon est protégé par <@${user}>`);
+            message.channel.send(`Ce salon est verrouillé par <@${user}>`);
         }else{
             message.react('🧹');
             clean(message);
